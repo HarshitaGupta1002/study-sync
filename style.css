@@ -1,0 +1,384 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f3ff;
+  color: #2c1f4a;
+}
+
+.navbar {
+  background: #4b0082;
+  color: #fff;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  background: #ff4747;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #cc0000;
+}
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #2c1f4a;
+  color: #fff;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  color: #ffd700;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-bottom: 12px;
+  color: #4b0082;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card ul li {
+  margin: 8px 0;
+}
+
+/* Bubble Sidebar */
+.sidebar {
+  width: 80px;
+  background: #2e1065;
+  padding: 20px 10px;
+  text-align: center;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar h2 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  background: #4c1d95;
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  background: #5b21b6;
+  transform: scale(1.1);
+}
+
+/* Center Login Card */
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-card {
+  width: 350px;
+  padding: 25px;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.auth-form input {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.auth-form input:focus {
+  border-color: #5b21b6;
+  box-shadow: 0 0 5px rgba(91,33,182,0.4);
+}
+
+.btn {
+  background: #5b21b6;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #7c3aed;
+}
+
+.switch {
+  margin-top: 12px;
+}
+
+.switch a {
+  color: #5b21b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Grid Layout for Friends Page */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Wide Card (for chats, search bar etc.) */
+.wide-card {
+  grid-column: span 2;
+}
+
+/* Friend Items */
+.friend-item {
+  background: #f9f9ff;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Buttons for actions */
+.accept { background: #22c55e; }
+.accept:hover { background: #16a34a; }
+
+.decline { background: #ef4444; }
+.decline:hover { background: #dc2626; }
+
+.cancel { background: #f59e0b; }
+.cancel:hover { background: #d97706; }
+
+.small {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+/* Chat list */
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-item {
+  display: flex;
+  justify-content: space-between;
+  background: #f1f5f9;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.search-box {
+  width: 80%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Progress Circle */
+.progress-circle {
+  width: 120px;
+  height: 120px;
+  margin: 15px auto;
+}
+
+/* Progress list */
+.progress-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+.progress-list li {
+  margin: 6px 0;
+}
+
+/* GFG Streak Bar */
+.streak-bar {
+  width: 100%;
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+.streak-fill {
+  height: 100%;
+  background: #22c55e;
+  border-radius: 6px;
+}
+
+/* Hackathon List */
+.hackathon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hackathon-item {
+  background: #f3f4f6;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Overall progress mini-circles */
+.overall-progress {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+.circle.small {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #e0f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+/* Buddy Stats Grid */
+.buddy-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.buddy-card {
+  flex: 1;
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.buddy-card:hover {
+  transform: scale(1.05);
+  background: #eef2ff;
+}
+
+/* Leaderboard */
+ol {
+  padding-left: 20px;
+}
+ol li {
+  margin: 5px 0;
+}
+
+/* Medium Circle */
+.circle.medium {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+}
+
+/* Glow on hover */
+.card:hover {
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+}
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4e6ef2 var(--progress, 75%),
+    #e6e6e6 0
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.progress-circle span {
+  background: #fff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

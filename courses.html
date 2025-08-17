@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyBuddy | Team Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>📚 StudyBuddy Team Dashboard</h1>
+    <button class="logout-btn">Logout</button>
+  </header>
+
+  <main class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="index.html">🏠</a></li>
+        <li><a href="friends.html">👥</a></li>
+        <li><a href="courses.html">📚</a></li>
+        <li><a href="projects.html">🚀</a></li>
+        <li><a href="hackathons.html">🎯</a></li>
+        <li><a href="settings.html">⚙️</a></li>
+      </ul>
+    </aside>
+
+    <!-- Content -->
+    <section class="content grid-layout">
+
+      <!-- Team Striver Sheet -->
+      <div class="card center">
+        <h2>🔥 Team Striver’s DSA Progress</h2>
+        <canvas class="progress-circle" data-progress="72"></canvas>
+        <p>Team Average: 72%</p>
+      </div>
+
+      <!-- Buddy Stats -->
+      <div class="card">
+        <h2>👥 Buddy Progress</h2>
+        <div class="buddy-stats">
+          <div class="buddy-card">
+            <h3>Rashmi</h3>
+            <p>LeetCode: 520</p>
+            <p>GFG Streak: 30 days</p>
+            <canvas class="circle small" data-progress="85"></canvas>
+          </div>
+          <div class="buddy-card">
+            <h3>Avika</h3>
+            <p>LeetCode: 210</p>
+            <p>GFG Streak: 15 days</p>
+            <canvas class="circle small" data-progress="55"></canvas>
+          </div>
+          <div class="buddy-card">
+            <h3>Harshita</h3>
+            <p>LeetCode: 432</p>
+            <p>GFG Streak: 25 days</p>
+            <canvas class="circle small" data-progress="68"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leaderboard -->
+      <div class="card">
+        <h2>🏆 Leaderboard</h2>
+        <ol>
+          <li><strong>Rashmi</strong> – 520 LC problems</li>
+          <li><strong>Harshita</strong> – 432 LC problems</li>
+          <li><strong>Avika</strong> – 210 LC problems</li>
+        </ol>
+      </div>
+
+      <!-- Hackathon Teams -->
+      <div class="card">
+        <h2>🎯 Hackathons Registered</h2>
+        <div class="hackathon-list">
+          <div class="hackathon-item">
+            Hack The Future – <strong>Rashmi & Harshita</strong>
+          </div>
+          <div class="hackathon-item">
+            Code Wars 2025 – <strong>Avika & Rashmi</strong>
+          </div>
+          <div class="hackathon-item">
+            AI Challenge – <strong>Full Team</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Overall Progress -->
+      <div class="card wide-card center">
+        <h2>📊 Team Overall Progress</h2>
+        <div class="overall-progress">
+          <canvas class="circle medium" data-progress="80"></canvas>
+          <canvas class="circle medium" data-progress="65"></canvas>
+          <canvas class="circle medium" data-progress="50"></canvas>
+        </div>
+        <p>Keep pushing forward as a team 🚀</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

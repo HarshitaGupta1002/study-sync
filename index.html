@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyBuddy | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>📘 StudyBuddy</h1>
+    <button class="logout-btn">Logout</button>
+  </header>
+
+  <main class="dashboard">
+
+    <!-- Bubble Sidebar -->
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="index.html">🏠</a></li>
+        <li><a href="friends.html">👥</a></li>
+        <li><a href="courses.html">📚</a></li>
+        <li><a href="projects.html">🚀</a></li>
+        <li><a href="hackathons.html">🎯</a></li>
+        <li><a href="settings.html">⚙️</a></li>
+      </ul>
+    </aside>
+
+    <!-- Centered Login/Signup -->
+    <section class="content center-box">
+      <div class="card login-card">
+        <h2>Welcome 👋</h2>
+        <p>Login or Sign Up to continue with StudyBuddy</p>
+
+        <form class="auth-form">
+          <input type="text" placeholder="Username" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit" class="btn">Login</button>
+        </form>
+
+        <p class="switch">Don’t have an account? <a href="#">Sign Up</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyBuddy | Friends</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>👥 Friends</h1>
+    <button class="logout-btn">Logout</button>
+  </header>
+
+  <main class="dashboard">
+
+    <!-- Bubble Sidebar -->
+    <aside class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="index.html">🏠</a></li>
+        <li><a href="friends.html">👥</a></li>
+        <li><a href="courses.html">📚</a></li>
+        <li><a href="projects.html">🚀</a></li>
+        <li><a href="hackathons.html">🎯</a></li>
+        <li><a href="settings.html">⚙️</a></li>
+      </ul>
+    </aside>
+
+    <!-- Content Area -->
+    <section class="content grid-layout">
+
+      <!-- Search Friends -->
+      <div class="card wide-card">
+        <h2>🔍 Find Friends</h2>
+        <input type="text" placeholder="Search by name, username or course..." class="search-box">
+        <button class="btn">Search</button>
+      </div>
+
+      <!-- Friend Requests -->
+      <div class="card">
+        <h2>📩 Friend Requests</h2>
+        <div class="friend-item">
+          <p><strong>Aditi</strong> wants to connect!</p>
+          <button class="btn accept">Accept</button>
+          <button class="btn decline">Decline</button>
+        </div>
+        <div class="friend-item">
+          <p><strong>Rohan</strong> sent you a request!</p>
+          <button class="btn accept">Accept</button>
+          <button class="btn decline">Decline</button>
+        </div>
+      </div>
+
+      <!-- Sent Requests -->
+      <div class="card">
+        <h2>📤 Sent Requests</h2>
+        <div class="friend-item">
+          <p>Request sent to <strong>Sanya</strong></p>
+          <button class="btn cancel">Cancel</button>
+        </div>
+        <div class="friend-item">
+          <p>Request sent to <strong>Kunal</strong></p>
+          <button class="btn cancel">Cancel</button>
+        </div>
+      </div>
+
+      <!-- Chats -->
+      <div class="card wide-card">
+        <h2>💬 Chats</h2>
+        <div class="chat-list">
+          <div class="chat-item">
+            <span>Harshita</span>
+            <button class="btn small">Message</button>
+          </div>
+          <div class="chat-item">
+            <span>Avika</span>
+            <button class="btn small">Message</button>
+          </div>
+          <div class="chat-item">
+            <span>Rashmi</span>
+            <button class="btn small">Message</button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
