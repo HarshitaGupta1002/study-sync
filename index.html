@@ -29,24 +29,168 @@
       </ul>
     </aside>
 
-    <!-- Centered Login/Signup -->
+    <!-- Center Content -->
     <section class="content center-box">
-      <div class="card login-card">
-        <h2>Welcome 👋</h2>
-        <p>Login or Sign Up to continue with StudyBuddy</p>
+      <div class="features-grid">
 
-        <form class="auth-form">
-          <input type="text" placeholder="Username" required>
-          <input type="password" placeholder="Password" required>
-          <button type="submit" class="btn">Login</button>
-        </form>
+        <!-- Left Features -->
+        <div class="features-column">
+          <div class="feature-card">
+            <h3>👥 Find Study Partners</h3>
+            <p>Connect with like-minded peers to study together.</p>
+          </div>
+          <div class="feature-card">
+            <h3>📚 Track Courses</h3>
+            <p>Keep all your courses organized in one place.</p>
+          </div>
+        </div>
 
-        <p class="switch">Don’t have an account? <a href="#">Sign Up</a></p>
+        <!-- Login & Signup Card -->
+        <div class="card login-card">
+          <h2>Welcome 👋</h2>
+          <p>Login or Sign Up to continue with StudyBuddy</p>
+
+          <!-- Login Form -->
+          <form class="auth-form" id="loginForm">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit" class="btn">Login</button>
+          </form>
+
+          <!-- Signup Form (hidden initially) -->
+          <form class="auth-form hidden" id="signupForm">
+            <!-- Full Name -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" required>
+
+            <!-- College -->
+            <label for="college">College:</label>
+            <input type="text" id="college" required>
+
+            <!-- Branch -->
+            <label for="branch">Branch:</label>
+            <input type="text" id="branch" required>
+
+            <!-- Graduation Year -->
+            <label for="gradyear">Graduation Year:</label>
+            <input type="number" id="gradyear" required>
+
+            <!-- Bio -->
+            <label for="bio">Short Bio:</label>
+            <textarea id="bio" rows="3" required></textarea>
+
+            <!-- Username -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <!-- Confirm Password -->
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" required>
+
+            <!-- Skills Section -->
+            <label for="skillsSelect">Select Skills:</label>
+            <select id="skillsSelect">
+              <option value="">-- Choose a Skill --</option>
+              <option value="DSA">DSA</option>
+              <option value="Competitive Programming">Competitive Programming</option>
+              <option value="Web Development">Web Development</option>
+              <option value="App Development">App Development</option>
+              <option value="Machine Learning">Machine Learning</option>
+              <option value="Deep Learning">Deep Learning</option>
+              <option value="AI">Artificial Intelligence</option>
+              <option value="Blockchain">Blockchain</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+              <option value="Cloud Computing">Cloud Computing</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Big Data">Big Data</option>
+              <option value="UI/UX">UI/UX Design</option>
+              <option value="DevOps">DevOps</option>
+              <option value="AR/VR">AR/VR</option>
+              <option value="Game Development">Game Development</option>
+              <option value="IoT">IoT</option>
+              <option value="Embedded Systems">Embedded Systems</option>
+              <option value="Networking">Networking</option>
+              <option value="Database Management">Database Management</option>
+            </select>
+
+            <!-- Selected Skills Chips -->
+            <div class="skills-container" id="selectedSkills"></div>
+
+            <!-- Level Section -->
+            <label for="level">Select Level:</label>
+            <select id="level" required>
+              <option value="">-- Select Level --</option>
+              <option value="Scratch">Scratch</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Expert">Expert</option>
+            </select>
+
+            <button type="submit" class="btn">Sign Up</button>
+          </form>
+
+          <!-- Switch text -->
+          <p class="switch" id="switchText">
+            Don’t have an account? <a href="#" id="toggleForm">Sign Up</a>
+          </p>
+        </div>
+
+        <!-- Right Features -->
+        <div class="features-column">
+          <div class="feature-card">
+            <h3>🚀 Work on Projects</h3>
+            <p>Collaborate on coding and research projects.</p>
+          </div>
+          <div class="feature-card">
+            <h3>🎯 Join Hackathons</h3>
+            <p>Participate in exciting challenges with friends.</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
   </main>
 
   <script src="script.js"></script>
+
+  <script>
+    const toggleLink = document.getElementById('toggleForm');
+    const switchText = document.getElementById('switchText');
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+
+    toggleLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginForm.classList.toggle('hidden');
+      signupForm.classList.toggle('hidden');
+
+      if (loginForm.classList.contains('hidden')) {
+        switchText.innerHTML = `Have an account? <a href="#" id="toggleForm">Login</a>`;
+      } else {
+        switchText.innerHTML = `Don’t have an account? <a href="#" id="toggleForm">Sign Up</a>`;
+      }
+
+      document.getElementById('toggleForm').addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleLink.click();
+      });
+    });
+  </script>
+
+  <style>
+    .hidden { display: none; }
+    textarea { width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; resize: none; }
+  </style>
+
 </body>
 </html>
+
